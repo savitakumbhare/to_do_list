@@ -18,7 +18,6 @@ class Todo
   end
 
   def to_displayable_string
-    no_str = " "
     "#{is_completed? ? DONE_MARKER : UNDONE_MARKER} #{text} #{due_today? ? NO_DATE : due_date}"
   end
 
