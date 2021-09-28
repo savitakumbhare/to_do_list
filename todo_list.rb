@@ -18,7 +18,9 @@ class Todo
   end
 
   def to_displayable_string
-    "#{is_completed? ? DONE_MARKER : UNDONE_MARKER} #{text} #{due_today? ? NO_DATE : due_date}"
+     display_status = "#{is_completed? ? DONE_MARKER : UNDONE_MARKER}"
+    display_date = "#{due_today? ? NO_DATE : due_date}"
+    "#{display_status} #{@text} #{display_date}"
   end
 
   def overdue?
